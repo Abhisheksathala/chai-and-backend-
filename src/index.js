@@ -11,6 +11,7 @@ indexDB()
 .then(()=>{
     app.listen(process.env.PORT  ||  8000 ,()=>{
         console.log("server started",`${process.env.PORT}`)
+        
         app.on("error",(err)=>{
             console.log("APP GOT error:",err);
             throw err
